@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form action="/products" enctype="multipart/form-data" method="post">
+    {{#if message }}
+        <h1>
+            Lỗi là: {{ message }}
+        </h1>
+    {{/if}}
+
+
+    Tên sản phẩm
+    <input name="name"> <br>
+    Giá sản phẩm
+    <input name ="price"> <br>
+    Giới thiệu về sản phẩm
+    <input name="description" > <br>
+    Giá sale
+    <input name="sale_price" > <br>
+    Ảnh sản phẩm
+    <input type="file" class="admin__input" id="myFile" name="myFile" />
+    <button class="admin__submit" type="submit" > Đăng sản phẩm </button>
+</form>
+</body>
+</html>

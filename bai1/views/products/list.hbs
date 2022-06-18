@@ -1,0 +1,39 @@
+<div>
+    {{#if message }}
+        <h1>
+            Lỗi là: {{ message }}
+        </h1>
+    {{/if}}
+
+    <h3>Danh sách sản phẩm</h3>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">price</th>
+            <th scope="col">sale_price</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each products}}
+
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.quantity}}</td>
+                <td>{{this.price}}</td>
+                <td>{{this.sale_price}}</td>
+                <td>
+                    <a href="/products/{{this.id}}" class="btn btn-link">Sửa</a>
+                    <a href="/products/delete/{{this.id}}" class="btn btn-link">Xóa</a>
+                </td>
+            </tr>
+        {{/each}}
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form action="/categories" enctype="multipart/form-data" method="post">
+    {{#if message }}
+        <h1>
+            Lỗi là: {{ message }}
+        </h1>
+    {{/if}}
+
+    Tên Nhóm Sản Phẩm
+    <input name="name" > </br>
+    Ảnh sản phẩm
+    <input type="file" class="admin__input" id="myFile" name="myFile" />
+    <button type="submit" >Đăng Nhóm Sản phẩm </button>
+</form>
+</body>
+</html>

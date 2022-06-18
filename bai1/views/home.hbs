@@ -1,0 +1,30 @@
+{{#if message }}
+    <h1>
+        Lỗi là: {{ message }}
+    </h1>
+{{/if}}
+
+<div class="mt-4">
+    <div class="row">
+        {{#each products}}
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-course-item">
+                    <a href="/products">
+                        <img src="{{this.image}}" class="card-img-top card-img" alt="{{this.name}}">
+
+                    </a>
+                    <div class="card-body">
+                        <a href="/products">
+                            <h5 class="card-title">{{this.name}}</h5>
+                        </a>
+                        <p class="card-text">{{this.description}}</p>
+                        <p class="card-text">{{this.price}}</p>
+                        <p class="card-text">{{this.sale_price}}</p>
+                        <a href="/carts" class="btn btn-primary">Add vào giỏ hàng</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+
+    </div>
+</div>
